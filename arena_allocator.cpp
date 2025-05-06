@@ -1,6 +1,9 @@
 #include "arena_allocator.h"
 
 #include <cstdlib>
+#include <cstring>
+#include <algorithm>
+#include <cassert>
 
 void* arena_alloc(Arena* arena, size_t size_bytes)
 {
