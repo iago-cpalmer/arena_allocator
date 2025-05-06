@@ -33,7 +33,6 @@
   #define REGION_DATA_SIZE 8*1024
 #endif
 
-#define cast_ptr(ptr) (decltype(ptr))
 
 typedef struct Region Region;
 
@@ -70,5 +69,10 @@ void arena_reset(Arena* arena);
 void free_arena(Arena* arena);
 
 void* arena_memdup(Arena* arena, const void* src, size_t size_bytes);
+
+#ifdef ARENA_IMPLEMENTATION
+
+
+#endif
 
 #endif // ARENA_H
